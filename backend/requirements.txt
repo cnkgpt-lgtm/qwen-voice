@@ -1,0 +1,8 @@
+# Backend lokal Qwen3-TTS — butuh Python 3.12 + GPU CUDA.
+# Pin versi mengikuti pyproject.toml repo QwenLM/Qwen3-TTS (qwen-tts 0.1.1).
+fastapi>=0.110
+uvicorn>=0.29
+soundfile>=0.12
+qwen-tts>=0.1.1
+torch>=2.0
+torchaudio>=2.0

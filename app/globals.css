@@ -1,0 +1,101 @@
+:root {
+  --bg: #f6f7f4;
+  --card: #ffffff;
+  --ink: #14201a;
+  --muted: #5c6b62;
+  --line: #dde5de;
+  --green: #0e7c4b;
+  --green-dark: #0a5c38;
+  --amber: #f5a524;
+  --red: #c0392b;
+  --radius: 14px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--green); }
+button { cursor: pointer; font: inherit; }
+input, select, textarea { font: inherit; }
+.wrap { max-width: 1020px; margin: 0 auto; padding: 20px 16px 64px; }
+header.hero {
+  background: linear-gradient(135deg, #0e7c4b, #0a5c38 60%, #123f2c);
+  border-radius: 18px;
+  color: #fff;
+  padding: 28px 24px;
+}
+header.hero h1 { margin: 0 0 8px; font-size: 30px; line-height: 1.15; }
+header.hero p { margin: 0; opacity: 0.92; max-width: 720px; line-height: 1.55; }
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  font-size: 12px;
+  padding: 4px 10px;
+  margin: 0 6px 10px 0;
+}
+.statusbar {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 12px 14px; margin: 14px 0;
+  font-size: 14px;
+}
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+.dot.ok { background: var(--green); }
+.dot.warn { background: var(--amber); }
+.dot.bad { background: var(--red); }
+.tabs { display: flex; gap: 8px; margin: 18px 0 12px; flex-wrap: wrap; }
+.tabs button {
+  border: 1px solid var(--line); background: var(--card);
+  border-radius: 999px; padding: 9px 16px; font-weight: 600;
+}
+.tabs button.active { background: var(--green); border-color: var(--green); color: #fff; }
+.card {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 18px; margin-bottom: 14px;
+}
+.card h2 { margin: 0 0 6px; font-size: 19px; }
+.card h3 { margin: 16px 0 8px; font-size: 15px; }
+.muted { color: var(--muted); font-size: 14px; line-height: 1.55; }
+label { display: block; font-weight: 600; font-size: 14px; margin: 14px 0 6px; }
+input[type="text"], input[type="password"], select, textarea {
+  width: 100%; border: 1px solid var(--line); border-radius: 10px;
+  padding: 10px 12px; background: #fff; color: var(--ink);
+}
+textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
+input[type="file"] { width: 100%; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 680px) { .row { grid-template-columns: 1fr; } }
+.btn {
+  background: var(--green); color: #fff; border: none;
+  border-radius: 10px; padding: 12px 18px; font-weight: 700;
+}
+.btn:hover { background: var(--green-dark); }
+.btn:disabled { opacity: 0.55; cursor: wait; }
+.btn.ghost { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+.btn.danger { background: #fff; color: var(--red); border: 1px solid #eec5bf; }
+.btnrow { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.alert {
+  border-radius: 10px; padding: 12px 14px; font-size: 14px;
+  line-height: 1.55; margin: 12px 0; white-space: pre-wrap;
+}
+.alert.info { background: #eaf4ee; border: 1px solid #bcdcc8; }
+.alert.warn { background: #fff6e0; border: 1px solid #f0d48a; }
+.alert.error { background: #fdecea; border: 1px solid #f0b8b0; }
+.alert.ok { background: #eaf4ee; border: 1px solid #bcdcc8; }
+.voice {
+  display: flex; justify-content: space-between; gap: 10px; align-items: center;
+  border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin: 8px 0;
+  font-size: 14px;
+}
+.voice code { font-size: 12px; word-break: break-all; }
+audio { width: 100%; margin-top: 10px; }
+ol.steps, ul.steps { line-height: 1.7; font-size: 14px; }
+code.inline { background: #eef1ee; padding: 1px 6px; border-radius: 6px; font-size: 13px; }
+footer { color: var(--muted); font-size: 13px; line-height: 1.6; margin-top: 24px; }
+.rec-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--red); display: inline-block; margin-right: 6px; animation: blink 1s infinite; }
+@keyframes blink { 50% { opacity: 0.25; } }

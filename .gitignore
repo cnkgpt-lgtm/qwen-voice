@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.env
+.env.local
+backend/.venv/
+backend/__pycache__/
+backend/voices/
+backend/outputs/
+*.wav
+*.mp3
+.DS_Store
